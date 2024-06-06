@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,16 +142,34 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content"> <a href='week3.html'>Next</a> >> week3<br /><h1>About</h1>
-<p>網頁:<span> </span><a class="Link--inTextBlock" href="https://otakuyoyo.github.io/wcm2024/">https://otakuyoyo.github.io/wcm2024/</a></p>
-<p>網誌:<a href="https://otakuyoyo.github.io/wcm2024/blog"> https://otakuyoyo.github.io/wcm2024/blog</a></p>
-<p>簡報:<a href="https://otakuyoyo.github.io/wcm2024/reveal"> https://otakuyoyo.github.io/wcm2024/reveal</a></p>
-<p>倉儲:<a href="https://github.com/otakuyoyo/wcm2024">https://github.com/otakuyoyo/wcm2024</a></p>
-<p>本 cmsimde 網際內容管理系統的對應 Template 倉儲:</p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
-<p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
-<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<br /> <a href='week3.html'>Next</a> >> week3</div>
+    <div id="tipue_search_content">遊戲 << <a href='遊戲.html'>Previous</a> <a href='cmsimde.html'>Next</a> >> cmsimde<br /><h1>塔羅牌</h1>
+<p><span style="vertical-align: inherit;">首先，確保您有一組塔羅牌的圖像文件，把它們儲存在一個名為「tarot_cards」的資料夾中。</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">pip install Pillow</pre>
+<p>接下來，您可以使用以下Python代碼來創建一個簡單的塔羅牌應用程序</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import os
+import random
+from PIL import Image
+
+# 塔羅牌圖像文件夾
+TAROT_FOLDER = "tarot_cards"
+
+# 獲取所有塔羅牌圖像的文件名
+tarot_cards = os.listdir(TAROT_FOLDER)
+
+# 隨機選擇一張塔羅牌
+selected_card = random.choice(tarot_cards)
+
+# 打印所選塔羅牌的名稱
+print("你的塔羅牌是：" + selected_card)
+
+# 顯示所選塔羅牌的圖像
+image_path = os.path.join(TAROT_FOLDER, selected_card)
+image = Image.open(image_path)
+image.show()</pre>
+<p>這個代碼將隨機選擇一張塔羅牌，並顯示其圖像。請確保您有一個名為"tarot_cards"的文件夾，其中包含塔羅牌圖像。這個示例僅供參考，您可以根據需要進一步擴展和自定義這個塔羅牌應用程序。</p>
+<p></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"></pre>
+<br />遊戲 << <a href='遊戲.html'>Previous</a> <a href='cmsimde.html'>Next</a> >> cmsimde</div>
 
     <!-- footer -->
       <div class="container">
