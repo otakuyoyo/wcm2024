@@ -75,7 +75,92 @@ image_path = os.path.join(TAROT_FOLDER, selected_card)
 image = Image.open(image_path)
 image.show()</pre>
 <p>這個代碼將隨機選擇一張塔羅牌，並顯示其圖像。請確保您有一個名為"tarot_cards"的文件夾，其中包含塔羅牌圖像。這個示例僅供參考，您可以根據需要進一步擴展和自定義這個塔羅牌應用程序。</p>
-<p></p>
+<h3>德州撲克</h3>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">import random
+
+# 定義撲克牌的花色和點數
+suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+ranks = ['Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace']
+
+# 初始化一副撲克牌
+deck = [{'rank': rank, 'suit': suit} for rank in ranks for suit in suits]
+
+# 洗牌
+random.shuffle(deck)
+
+# 發兩張牌給玩家和莊家
+player_hand = [deck.pop(), deck.pop()]
+dealer_hand = [deck.pop(), deck.pop()]
+
+# 顯示玩家的牌和一張莊家的牌
+print(f'玩家的牌: {player_hand[0]["rank"]} of {player_hand[0]["suit"]} 和 {player_hand[1]["rank"]} of {player_hand[1]["suit"]}')
+print(f'莊家的牌: {dealer_hand[0]["rank"]} of {dealer_hand[0]["suit"]} 和 一張未知牌')
+
+# 檢查是否有玩家或莊家已經有21點（Blackjack）
+def blackjack(hand):
+    values = [card_value(card) for card in hand]
+    return sum(values) == 21
+
+# 計算牌的點數
+def card_value(card):
+    if card['rank'] in ['Jack', 'Queen', 'King']:
+        return 10
+    elif card['rank'] == 'Ace':
+        return 11
+    else:
+        return int(card['rank'])
+
+# 主遊戲迴圈
+while True:
+    # 檢查是否有玩家或莊家已經有21點
+    if blackjack(player_hand) or blackjack(dealer_hand):
+        break
+
+    # 玩家選擇要加牌還是停止
+    action = input('要加牌嗎？（加牌/停止）: ')
+    if action.lower() == '加牌':
+        player_hand.append(deck.pop())
+        print(f'你的牌: {", ".join([card["rank"] + " of " + card["suit"] for card in player_hand])}')
+    else:
+        break
+
+# 莊家加牌直到達到17點或更高
+while sum([card_value(card) for card in dealer_hand]) &lt; 17:
+    dealer_hand.append(deck.pop())
+
+# 顯示最終結果
+print(f'你的牌: {", ".join([card["rank"] + " of " + card["suit"] for card in player_hand])}')
+print(f'你的點數: {sum([card_value(card) for card in player_hand])}')
+print(f'莊家的牌: {", ".join([card["rank"] + " of " + card["suit"] for card in dealer_hand])}')
+print(f'莊家的點數: {sum([card_value(card) for card in dealer_hand])}')
+
+# 判斷贏家
+if sum([card_value(card) for card in player_hand]) &gt; 21:
+    print('你爆牌了，莊家贏了！')
+elif sum([card_value(card) for card in dealer_hand]) &gt; 21:
+    print('莊家爆牌了，你贏了！')
+elif sum([card_value(card) for card in player_hand]) &gt; sum([card_value(card) for card in dealer_hand]):
+    print('你贏了！')
+elif sum([card_value(card) for card in player_hand]) &lt; sum([card_value(card) for card in dealer_hand]):
+    print('莊家贏了！')
+else:
+    print('平局！')
+</pre>
+<p>在執行上面的代碼後，你將開始一個簡單的德州撲克遊戲。遊戲的進行方式如下：</p>
+<ol>
+<li>
+<p>執行代碼：在你的 Python 開發環境中運行上面提供的代碼。這樣你就會看到一副洗好的撲克牌和玩家、莊家的初始牌。</p>
+</li>
+<li>
+<p>玩家回合：遊戲將提示你進行選擇。你可以輸入"加牌"以繼續要求加牌，或者輸入"停止"以結束你的回合。</p>
+</li>
+<li>
+<p>莊家回合：當你選擇"停止"或者當你的牌總和達到21點時，莊家將開始自己的回合，自動加牌直到達到17點或更高。</p>
+</li>
+<li>
+<p>結算：遊戲將計算玩家和莊家的點數，並確定勝利者。結果將被輸出到屏幕上，以宣布遊戲的結果。</p>
+</li>
+</ol>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"></pre>
 <h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>

@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,16 +142,91 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content"> <a href='week3.html'>Next</a> >> week3<br /><h1>About</h1>
-<p>網頁:<span> </span><a class="Link--inTextBlock" href="https://otakuyoyo.github.io/wcm2024/">https://otakuyoyo.github.io/wcm2024/</a></p>
-<p>網誌:<a href="https://otakuyoyo.github.io/wcm2024/blog"> https://otakuyoyo.github.io/wcm2024/blog</a></p>
-<p>簡報:<a href="https://otakuyoyo.github.io/wcm2024/reveal"> https://otakuyoyo.github.io/wcm2024/reveal</a></p>
-<p>倉儲:<a href="https://github.com/otakuyoyo/wcm2024">https://github.com/otakuyoyo/wcm2024</a></p>
-<p>本 cmsimde 網際內容管理系統的對應 Template 倉儲:</p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
-<p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
-<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<br /> <a href='week3.html'>Next</a> >> week3</div>
+    <div id="tipue_search_content">西洋棋 << <a href='西洋棋.html'>Previous</a> <a href='cmsimde.html'>Next</a> >> cmsimde<br /><h1>五子棋</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def initialize_board(size=15):
+    return [[' ' for _ in range(size)] for _ in range(size)]
+
+def colored_piece(piece):
+    if piece == 'X':
+        return f"\033[91m{piece}\033[0m"  # Red
+    elif piece == 'O':
+        return f"\033[92m{piece}\033[0m"  # Green
+    return piece
+
+def print_board(board):
+    size = len(board)
+    # Print the top column numbers
+    print("    " + " ".join(f"{i+1:2}" for i in range(size)))
+    print("  +" + "---+" * size)
+    for idx, row in enumerate(board):
+        print(f"{idx+1:2} | " + " | ".join(colored_piece(cell) for cell in row) + " |")
+        print("  +" + "---+" * size)
+
+def check_winner(board, player):
+    size = len(board)
+    # Check horizontal, vertical, and diagonal lines
+    for row in range(size):
+        for col in range(size):
+            if board[row][col] == player:
+                # Check horizontal
+                if col + 4 &lt; size and all(board[row][col+i] == player for i in range(5)):
+                    return True
+                # Check vertical
+                if row + 4 &lt; size and all(board[row+i][col] == player for i in range(5)):
+                    return True
+                # Check diagonal (down-right)
+                if row + 4 &lt; size and col + 4 &lt; size and all(board[row+i][col+i] == player for i in range(5)):
+                    return True
+                # Check diagonal (down-left)
+                if row + 4 &lt; size and col - 4 &gt;= 0 and all(board[row+i][col-i] == player for i in range(5)):
+                    return True
+    return False
+
+def play_game():
+    board = initialize_board()
+    print("歡迎來到五子棋遊戲！")
+    print("玩家1: 黑子 (X) \033[91m紅色\033[0m")
+    print("玩家2: 白子 (O) \033[92m綠色\033[0m")
+    current_player = 'X'  # X starts the game, representing black stones
+    while True:
+        print_board(board)
+        print(f"玩家 {current_player} 的回合")
+        try:
+            row = int(input("請輸入行 (1-15): ")) - 1
+            col = int(input("請輸入列 (1-15): ")) - 1
+            if 0 &lt;= row &lt; len(board) and 0 &lt;= col &lt; len(board[0]) and board[row][col] == ' ':
+                board[row][col] = current_player
+                if check_winner(board, current_player):
+                    print_board(board)
+                    print(f"玩家 {current_player} 獲勝！")
+                    break
+                current_player = 'O' if current_player == 'X' else 'X'
+            else:
+                print("無效的移動，請重試。")
+        except ValueError:
+            print("請輸入有效的數字。")
+
+if __name__ == "__main__":
+    play_game()
+</pre>
+<p>這是一款文字版的五子棋遊戲，旨在提供玩家一個簡單且有趣的方式來享受五子棋的樂趣。以下是這款五子棋遊戲的主要特點和玩法說明：</p>
+<p>遊戲特點</p>
+<ol>
+<li><strong>雙人遊戲</strong>：兩位玩家輪流下棋，輪流放置黑子（X）和白子（O）。</li>
+<li><strong>文字介面</strong>：玩家需要輸入棋子的位置來進行落子。</li>
+<li><strong>棋盤顯示</strong>：棋盤以表格形式顯示，每個位置用數字標示，方便玩家輸入。</li>
+<li><strong>簡單易用</strong>：遊戲規則簡單，適合所有年齡段的玩家。</li>
+</ol>
+<p>遊戲玩法說明</p>
+<ol>
+<li><strong>遊戲開始</strong>：啟動遊戲後，系統會顯示初始空棋盤，並提示黑方玩家進行落子。</li>
+<li><strong>輸入落子位置</strong>：玩家需要輸入棋子的行和列，例如在第4行第5列落子，輸入格式為 "4 5"。</li>
+<li><strong>檢查落子</strong>：系統會檢查輸入的位置是否合法，包括是否在棋盤範圍內，該位置是否已被佔用等。</li>
+<li><strong>更新棋盤</strong>：如果落子合法，系統將更新棋盤並顯示新狀態；如果不合法，系統會提示玩家重新輸入。</li>
+<li><strong>勝利條件</strong>：系統自動檢查是否有五個連續相同顏色的棋子（橫、縱或斜），若有，則該玩家獲勝。</li>
+</ol>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"></pre>
+<br />西洋棋 << <a href='西洋棋.html'>Previous</a> <a href='cmsimde.html'>Next</a> >> cmsimde</div>
 
     <!-- footer -->
       <div class="container">
