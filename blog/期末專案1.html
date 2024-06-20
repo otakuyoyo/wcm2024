@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>期末專案1</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="41223149網際內容管理系統 Full Atom Feed" />
+          <link href="./feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="41223149網際內容管理系統 Categories Atom Feed" />
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
+    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="./期末專案1.html" rel="canonical" />
+
+        <meta name="description" content="塔羅牌 首先，確保您有一組塔羅牌的圖像文件，把它們儲存在一個名為「tarot_cards」的資料夾中。 pip install Pillow 接下來，可以使用以下Python代碼來創建一個簡單的塔羅牌應用程序 import os …">
+
+        <meta name="author" content="kmol">
+
+        <meta name="tags" content="期末專案網誌編寫">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="41223149網際內容管理系統"/>
+<meta property="og:title" content="期末專案1"/>
+<meta property="og:description" content="塔羅牌 首先，確保您有一組塔羅牌的圖像文件，把它們儲存在一個名為「tarot_cards」的資料夾中。 pip install Pillow 接下來，可以使用以下Python代碼來創建一個簡單的塔羅牌應用程序 import os …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./期末專案1.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2024-02-18 12:00:00+08:00"/>
+<meta property="article:modified_time" content="2024-06-20 01:59:17.774343+08:00"/>
+<meta property="article:author" content="./author/kmol.html">
+<meta property="article:section" content="期末專案1"/>
+<meta property="article:tag" content="期末專案網誌編寫"/>
+<meta property="og:image" content="./theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "期末專案1",
+  "headline": "期末專案1",
+  "datePublished": "2024-02-18 12:00:00+08:00",
+  "dateModified": "2024-06-20 01:59:17.774343+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "kmol",
+    "url": "./author/kmol.html"
+  },
+  "image": "./theme/images/post-bg.jpg",
+  "url": "./期末專案1.html",
+  "description": "塔羅牌 首先，確保您有一組塔羅牌的圖像文件，把它們儲存在一個名為「tarot_cards」的資料夾中。 pip install Pillow 接下來，可以使用以下Python代碼來創建一個簡單的塔羅牌應用程序 import os …"
+}
+</script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "./../cmsimde/static/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "./../cmsimde/static/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<!-- for LaTeX equations -->
+<!--<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+    <!--
+
+              <li role="presentation"><a href="./pages/about/">About</a></li>
+      -->
+
+            <li><a href="./pages/about/index.html">About</span></a></li>
+            
+            <li><a href="./archives.html">Archives</span></a></li>
+            
+            <li><a href="./categories.html">Categories</span></a></li>
+            
+            <li><a href="./tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">期末專案1</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/kmol.html">Kmol</a>
+            | <time datetime="Sun 18 February 2024">Sun 18 February 2024</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <span class="post-meta"> | Updated on Thu 20 June 2024</span>
+            <div class="post-cover cover" style="background-image: url('./theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="./search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
+
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h1>塔羅牌</h1>
+<p>首先，確保您有一組塔羅牌的圖像文件，把它們儲存在一個名為「tarot_cards」的資料夾中。</p>
+<p>pip install Pillow
+接下來，可以使用以下Python代碼來創建一個簡單的塔羅牌應用程序</p>
+<p>import os
+import random
+from PIL import Image</p>
+<h1>塔羅牌圖像文件夾</h1>
+<p>TAROT_FOLDER = "tarot_cards"</p>
+<h1>獲取所有塔羅牌圖像的文件名</h1>
+<p>tarot_cards = os.listdir(TAROT_FOLDER)</p>
+<h1>隨機選擇一張塔羅牌</h1>
+<p>selected_card = random.choice(tarot_cards)</p>
+<h1>打印所選塔羅牌的名稱</h1>
+<p>print("你的塔羅牌是：" + selected_card)</p>
+<h1>顯示所選塔羅牌的圖像</h1>
+<p>image_path = os.path.join(TAROT_FOLDER, selected_card)
+image = Image.open(image_path)
+image.show()</p>
+<p>這個代碼將隨機選擇一張塔羅牌，並顯示其圖像。並請確保您有一個名為"tarot_cards"的文件夾，其中包含塔羅牌圖像。</p>
+<h1>德州撲克</h1>
+<p>import random</p>
+<h1>定義撲克牌的花色和點數</h1>
+<p>suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+ranks = ['Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace']</p>
+<h1>初始化一副撲克牌</h1>
+<p>deck = [{'rank': rank, 'suit': suit} for rank in ranks for suit in suits]</p>
+<h1>洗牌</h1>
+<p>random.shuffle(deck)</p>
+<h1>發兩張牌給玩家和莊家</h1>
+<p>player_hand = [deck.pop(), deck.pop()]
+dealer_hand = [deck.pop(), deck.pop()]</p>
+<h1>顯示玩家的牌和一張莊家的牌</h1>
+<p>print(f'玩家的牌: {player_hand[0]["rank"]} of {player_hand[0]["suit"]} 和 {player_hand[1]["rank"]} of {player_hand[1]["suit"]}')
+print(f'莊家的牌: {dealer_hand[0]["rank"]} of {dealer_hand[0]["suit"]} 和 一張未知牌')</p>
+<h1>檢查是否有玩家或莊家已經有21點（Blackjack）</h1>
+<p>def blackjack(hand):
+    values = [card_value(card) for card in hand]
+    return sum(values) == 21</p>
+<h1>計算牌的點數</h1>
+<p>def card_value(card):
+    if card['rank'] in ['Jack', 'Queen', 'King']:
+        return 10
+    elif card['rank'] == 'Ace':
+        return 11
+    else:
+        return int(card['rank'])</p>
+<h1>主遊戲迴圈</h1>
+<p>while True:
+    # 檢查是否有玩家或莊家已經有21點
+    if blackjack(player_hand) or blackjack(dealer_hand):
+        break</p>
+<div class="highlight"><pre><span></span><code><span class="gh">#</span> 玩家選擇要加牌還是停止
+action = input(&#39;要加牌嗎？（加牌/停止）: &#39;)
+if action.lower() == &#39;加牌&#39;:
+    player_hand.append(deck.pop())
+    print(f&#39;你的牌: {&quot;, &quot;.join([card[&quot;rank&quot;] + &quot; of &quot; + card[&quot;suit&quot;] for card in player_hand])}&#39;)
+else:
+    break
+</code></pre></div>
+
+<h1>莊家加牌直到達到17點或更高</h1>
+<p>while sum([card_value(card) for card in dealer_hand]) &lt; 17:
+    dealer_hand.append(deck.pop())</p>
+<h1>顯示最終結果</h1>
+<p>print(f'你的牌: {", ".join([card["rank"] + " of " + card["suit"] for card in player_hand])}')
+print(f'你的點數: {sum([card_value(card) for card in player_hand])}')
+print(f'莊家的牌: {", ".join([card["rank"] + " of " + card["suit"] for card in dealer_hand])}')
+print(f'莊家的點數: {sum([card_value(card) for card in dealer_hand])}')</p>
+<h1>判斷贏家</h1>
+<p>if sum([card_value(card) for card in player_hand]) &gt; 21:
+    print('你爆牌了，莊家贏了！')
+elif sum([card_value(card) for card in dealer_hand]) &gt; 21:
+    print('莊家爆牌了，你贏了！')
+elif sum([card_value(card) for card in player_hand]) &gt; sum([card_value(card) for card in dealer_hand]):
+    print('你贏了！')
+elif sum([card_value(card) for card in player_hand]) &lt; sum([card_value(card) for card in dealer_hand]):
+    print('莊家贏了！')
+else:
+    print('平局！')
+在執行上面的代碼後，你將開始一個簡單的德州撲克遊戲。遊戲的進行方式如下：</p>
+<p>執行代碼：在你的 Python 開發環境中運行上面提供的代碼。這樣你就會看到一副洗好的撲克牌和玩家、莊家的初始牌。</p>
+<p>玩家回合：遊戲將提示你進行選擇。你可以輸入"加牌"以繼續要求加牌，或者輸入"停止"以結束你的回合。</p>
+<p>莊家回合：當你選擇"停止"或者當你的牌總和達到21點時，莊家將開始自己的回合，自動加牌直到達到17點或更高。</p>
+<p>結算：遊戲將計算玩家和莊家的點數，並確定勝利者。結果將被輸出到屏幕上，以宣布遊戲的結果。</p>
+<h1>西洋棋</h1>
+<p>def create_board():
+    board = [
+        ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
+        ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+        ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']
+    ]
+    return board</p>
+<p>def print_board(board):
+    def colored_piece(piece):
+        if piece.islower():
+            return f"\033[94m{piece.upper()}\033[0m"  # Dark blue for black pieces
+        elif piece.isupper():
+            return f"\033[96m{piece}\033[0m"  # Cyan for white pieces
+        return piece</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  a b c d e f g h&quot;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">colored_piece</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">cell</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">row</span><span class="p">))</span>
+</code></pre></div>
+
+<p>def is_valid_move(board, start, end, player, en_passant):
+    start_row, start_col = start
+    end_row, end_col = end
+    piece = board[start_row][start_col]</p>
+<div class="highlight"><pre><span></span><code>if player == &#39;White&#39; and piece.islower():
+    return False
+if player == &#39;Black&#39; and piece.isupper():
+    return False
+
+if piece.lower() == &#39;p&#39;:
+    return is_valid_move_pawn(board, start, end, en_passant)
+elif piece.lower() == &#39;r&#39;:
+    return is_valid_move_rook(board, start, end)
+elif piece.lower() == &#39;n&#39;:
+    return is_valid_move_knight(board, start, end)
+elif piece.lower() == &#39;b&#39;:
+    return is_valid_move_bishop(board, start, end)
+elif piece.lower() == &#39;q&#39;:
+    return is_valid_move_queen(board, start, end)
+elif piece.lower() == &#39;k&#39;:
+    return is_valid_move_king(board, start, end)
+return False
+</code></pre></div>
+
+<p>def is_valid_move_pawn(board, start, end, en_passant):
+    start_row, start_col = start
+    end_row, end_col = end
+    piece = board[start_row][start_col]</p>
+<div class="highlight"><pre><span></span><code><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">piece</span><span class="p">.</span><span class="n">isupper</span><span class="p">()</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">start_row_base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">piece</span><span class="p">.</span><span class="n">isupper</span><span class="p">()</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="k">if</span><span class="w"> </span><span class="n">board</span><span class="o">[</span><span class="n">end_row</span><span class="o">][</span><span class="n">end_col</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="err">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">start_col</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">end_col</span><span class="p">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">end_row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">start_row</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nl">direction</span><span class="p">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">True</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">start_row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">start_row_base</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">end_row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">start_row</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">board</span><span class="o">[</span><span class="n">start_row + direction</span><span class="o">][</span><span class="n">start_col</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="err">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">True</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">start_row</span><span class="p">,</span><span class="w"> </span><span class="n">start_col</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">en_passant</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">end_row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">start_row</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">start_col</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">end_col</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">True</span>
+<span class="k">else</span><span class="err">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">start_col</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">end_col</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">end_row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">start_row</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nl">direction</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">True</span>
+
+<span class="k">return</span><span class="w"> </span><span class="k">False</span>
+</code></pre></div>
+
+<p>def is_valid_move_rook(board, start, end):
+    start_row, start_col = start
+    end_row, end_col = end
+    if start_row != end_row and start_col != end_col:
+        return False
+    step_row = (end_row - start_row) // max(1, abs(end_row - start_row)) if start_row != end_row else 0
+    step_col = (end_col - start_col) // max(1, abs(end_col - start_col)) if start_col != end_col else 0
+    for i in range(1, max(abs(end_row - start_row), abs(end_col - start_col))):
+        if board[start_row + i * step_row][start_col + i * step_col] != ' ':
+            return False
+    return True</p>
+<p>def is_valid_move_knight(board, start, end):
+    start_row, start_col = start
+    end_row, end_col = end
+    return (abs(start_row - end_row), abs(start_col - end_col)) in [(1, 2), (2, 1)]</p>
+<p>def is_valid_move_bishop(board, start, end):
+    start_row, start_col = start
+    end_row, end_col = end
+    if abs(start_row - end_row) != abs(start_col - end_col):
+        return False
+    step_row = (end_row - start_row) // abs(end_row - start_row)
+    step_col = (end_col - start_col) // abs(end_col - start_col)
+    for i in range(1, abs(end_row - start_row)):
+        if board[start_row + i * step_row][start_col + i * step_col] != ' ':
+            return False
+    return True</p>
+<p>def is_valid_move_queen(board, start, end):
+    return is_valid_move_rook(board, start, end) or is_valid_move_bishop(board, start, end)</p>
+<p>def is_valid_move_king(board, start, end):
+    start_row, start_col = start
+    end_row, end_col = end
+    return max(abs(start_row - end_row), abs(start_col - end_col)) == 1</p>
+<p>def move_piece(board, start, end, player, en_passant):
+    if not is_valid_move(board, start, end, player, en_passant):
+        print("无效的移动!")
+        return en_passant
+    start_row, start_col = start
+    end_row, end_col = end</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">处理过路兵</span>
+<span class="k">if</span><span class="w"> </span><span class="n">board</span><span class="o">[</span><span class="n">start_row</span><span class="o">][</span><span class="n">start_col</span><span class="o">]</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;p&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="n">start_row</span><span class="p">,</span><span class="w"> </span><span class="n">start_col</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">en_passant</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">start_col</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">end_col</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;White&#39;</span><span class="err">:</span>
+<span class="w">        </span><span class="n">board</span><span class="o">[</span><span class="n">end_row + 1</span><span class="o">][</span><span class="n">end_col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span>
+<span class="w">    </span><span class="k">else</span><span class="err">:</span>
+<span class="w">        </span><span class="n">board</span><span class="o">[</span><span class="n">end_row - 1</span><span class="o">][</span><span class="n">end_col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span>
+
+<span class="n">board</span><span class="o">[</span><span class="n">end_row</span><span class="o">][</span><span class="n">end_col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">board</span><span class="o">[</span><span class="n">start_row</span><span class="o">][</span><span class="n">start_col</span><span class="o">]</span>
+<span class="n">board</span><span class="o">[</span><span class="n">start_row</span><span class="o">][</span><span class="n">start_col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">处理升变</span>
+<span class="k">if</span><span class="w"> </span><span class="n">board</span><span class="o">[</span><span class="n">end_row</span><span class="o">][</span><span class="n">end_col</span><span class="o">]</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;p&#39;</span><span class="err">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">player</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;White&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">end_row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="p">(</span><span class="n">player</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Black&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">end_row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="k">True</span><span class="err">:</span>
+<span class="w">            </span><span class="n">promotion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">input</span><span class="p">(</span><span class="ss">&quot;选择升变的棋子 (Q/R/B/N): &quot;</span><span class="p">).</span><span class="nf">upper</span><span class="p">()</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">promotion</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="s1">&#39;QRBN&#39;</span><span class="err">:</span>
+<span class="w">                </span><span class="n">board</span><span class="o">[</span><span class="n">end_row</span><span class="o">][</span><span class="n">end_col</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">promotion</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;White&#39;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">promotion</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
+<span class="w">                </span><span class="k">break</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">返回新的过路兵位置</span>
+<span class="k">if</span><span class="w"> </span><span class="n">board</span><span class="o">[</span><span class="n">end_row</span><span class="o">][</span><span class="n">end_col</span><span class="o">]</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;p&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">start_row</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">end_row</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">end_row</span><span class="p">,</span><span class="w"> </span><span class="n">end_col</span><span class="p">)</span>
+
+<span class="k">return</span><span class="w"> </span><span class="k">None</span>
+</code></pre></div>
+
+<p>def parse_position(position):
+    if len(position) != 2:
+        raise ValueError("位置格式不正确，请输入类似 'e2' 的格式。")
+    col, row = position
+    if col not in "abcdefgh" or row not in "12345678":
+        raise ValueError("位置格式不正确，请输入类似 'e2' 的格式。")
+    col = ord(col) - ord("a")
+    row = 8 - int(row)
+    return (row, col)</p>
+<p>def game_instructions():
+    print("欢迎来到西洋棋游戏!")
+    print("游戏规则说明:")
+    print("1. 两位玩家轮流进行游戏，白方先行。")
+    print("2. 使用棋盘上的位置来移动棋子，例如 'e2' 移动到 'e4'。")
+    print("3. 黑色棋子为深蓝色，白色棋子为水蓝色。")
+    print("4. 特殊规则：兵的升变、过路兵、易位、将军、将死等。")
+    print("请享受游戏!\n")</p>
+<p>def play_chess():
+    game_instructions()
+    board = create_board()
+    current_player = "White"
+    en_passant = None</p>
+<div class="highlight"><pre><span></span><code>while True:
+    print_board(board)
+    print(f&quot;{current_player} 的回合&quot;)
+    while True:
+        try:
+            start = input(&quot;输入起始位置 (例如 e2): &quot;)
+            start_pos = parse_position(start)
+            break
+        except ValueError as e:
+            print(e)
+
+    while True:
+        try:
+            end = input(&quot;输入结束位置 (例如 e4): &quot;)
+            end_pos = parse_position(end)
+            break
+        except ValueError as e:
+            print(e)
+
+    en_passant = move_piece(board, start_pos, end_pos, current_player, en_passant)
+    current_player = &quot;Black&quot; if current_player == &quot;White&quot; else &quot;White&quot;
+    if input(&quot;是否结束游戏？ (y/n): &quot;).lower() == &quot;y&quot;:
+        break
+</code></pre></div>
+
+<p>if <strong>name</strong> == "<strong>main</strong>":
+    play_chess()
+這是一款文字版的西洋棋遊戲，具有以下特點：</p>
+<p>雙人遊戲：兩位玩家輪流操作，白方先行。
+文字介面：玩家輸入棋子位置來移動棋子。
+棋盤顯示：棋盤以表格形式顯示，黑方棋子為深藍色，白方棋子為水藍色。
+特殊規則：包括兵的升變、過路兵、易位、將軍和將死等規則。
+遊戲說明：玩家輸入起始和結束位置來移動棋子，例如 "e2 e4"。
+系統檢查移動是否合法，合法則更新棋盤，不合法則提示重新輸入。
+特殊移動如兵的升變和易位會自動處理。
+隨時輸入 "y" 結束遊戲。</p>
+<h1>五子棋</h1>
+<p>def initialize_board(size=15):
+    return [[' ' for _ in range(size)] for _ in range(size)]</p>
+<p>def colored_piece(piece):
+    if piece == 'X':
+        return f"\033[91m{piece}\033[0m"  # Red
+    elif piece == 'O':
+        return f"\033[92m{piece}\033[0m"  # Green
+    return piece</p>
+<p>def print_board(board):
+    size = len(board)
+    # Print the top column numbers
+    print("    " + " ".join(f"{i+1:2}" for i in range(size)))
+    print("  +" + "---+" * size)
+    for idx, row in enumerate(board):
+        print(f"{idx+1:2} | " + " | ".join(colored_piece(cell) for cell in row) + " |")
+        print("  +" + "---+" * size)</p>
+<p>def check_winner(board, player):
+    size = len(board)
+    # Check horizontal, vertical, and diagonal lines
+    for row in range(size):
+        for col in range(size):
+            if board[row][col] == player:
+                # Check horizontal
+                if col + 4 &lt; size and all(board[row][col+i] == player for i in range(5)):
+                    return True
+                # Check vertical
+                if row + 4 &lt; size and all(board[row+i][col] == player for i in range(5)):
+                    return True
+                # Check diagonal (down-right)
+                if row + 4 &lt; size and col + 4 &lt; size and all(board[row+i][col+i] == player for i in range(5)):
+                    return True
+                # Check diagonal (down-left)
+                if row + 4 &lt; size and col - 4 &gt;= 0 and all(board[row+i][col-i] == player for i in range(5)):
+                    return True
+    return False</p>
+<p>def play_game():
+    board = initialize_board()
+    print("歡迎來到五子棋遊戲！")
+    print("玩家1: 黑子 (X) \033[91m紅色\033[0m")
+    print("玩家2: 白子 (O) \033[92m綠色\033[0m")
+    current_player = 'X'  # X starts the game, representing black stones
+    while True:
+        print_board(board)
+        print(f"玩家 {current_player} 的回合")
+        try:
+            row = int(input("請輸入行 (1-15): ")) - 1
+            col = int(input("請輸入列 (1-15): ")) - 1
+            if 0 &lt;= row &lt; len(board) and 0 &lt;= col &lt; len(board[0]) and board[row][col] == ' ':
+                board[row][col] = current_player
+                if check_winner(board, current_player):
+                    print_board(board)
+                    print(f"玩家 {current_player} 獲勝！")
+                    break
+                current_player = 'O' if current_player == 'X' else 'X'
+            else:
+                print("無效的移動，請重試。")
+        except ValueError:
+            print("請輸入有效的數字。")</p>
+<p>if <strong>name</strong> == "<strong>main</strong>":
+    play_game()
+這是一款文字版的五子棋遊戲，旨在提供玩家一個簡單且有趣的方式來享受五子棋的樂趣。以下是這款五子棋遊戲的主要特點和玩法說明：</p>
+<h1>遊戲特點</h1>
+<p>雙人遊戲：兩位玩家輪流下棋，輪流放置黑子（X）和白子（O）。
+文字介面：玩家需要輸入棋子的位置來進行落子。
+棋盤顯示：棋盤以表格形式顯示，每個位置用數字標示，方便玩家輸入。
+簡單易用：遊戲規則簡單，適合所有年齡段的玩家。</p>
+<h1>遊戲玩法說明</h1>
+<p>遊戲開始：啟動遊戲後，系統會顯示初始空棋盤，並提示黑方玩家進行落子。
+輸入落子位置：玩家需要輸入棋子的行和列，例如在第4行第5列落子，輸入格式為 "4 5"。
+檢查落子：系統會檢查輸入的位置是否合法，包括是否在棋盤範圍內，該位置是否已被佔用等。
+更新棋盤：如果落子合法，系統將更新棋盤並顯示新狀態；如果不合法，系統會提示玩家重新輸入。
+勝利條件：系統自動檢查是否有五個連續相同顏色的棋子（橫、縱或斜），若有，則該玩家獲勝。
+遊戲連結： https://github.com/otakuyoyo/gomoku/blob/main/gomoku.html</p>
+            </section>
+
+            <section class="post-info">
+                <aside class="post-tags">
+<a href="./tag/qi-mo-zhuan-an-wang-zhi-bian-xie.html">期末專案網誌編寫</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <a class="post-nav-next" href="./w4.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-left"></i>
+                                <h2 class="post-nav-title">w4課程</h2>
+                            <p class="post-nav-excerpt">有關建立網站 這裡所謂的網站指的是 Web site, 也就是 WWW (World Wide Web) 伺服器 (Server)端的超文件 (Hypertext),...</p>
+                        </section>
+                    </a>
+                    <a class="post-nav-prev" href="./2024-Spring-w1-blog-tutorial.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">2024 Spring 課程</h2>
+                            <p class="post-nav-excerpt">2024 Spring 網際內容管理與協同產品設計實習課程教學導引.</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+ 
+
+
+</body>
+</html>

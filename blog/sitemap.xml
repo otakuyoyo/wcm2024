@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./</loc>
-<lastmod>2024-06-20T01:21:40-00:00</lastmod>
+<lastmod>2024-06-20T01:59:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./archives.html</loc>
-<lastmod>2024-06-20T01:21:40-00:00</lastmod>
+<lastmod>2024-06-20T01:59:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./tags.html</loc>
-<lastmod>2024-06-20T01:21:40-00:00</lastmod>
+<lastmod>2024-06-20T01:59:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./categories.html</loc>
-<lastmod>2024-06-20T01:21:40-00:00</lastmod>
+<lastmod>2024-06-20T01:59:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./w3.html</loc>
-<lastmod>2024-06-20T01:21:15+08:00</lastmod>
+<lastmod>2024-06-20T01:25:03+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./w4.html</loc>
+<lastmod>2024-06-20T01:27:55+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./期末專案1.html</loc>
+<lastmod>2024-06-20T01:59:17+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -53,6 +67,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>./category/qi-mo-zhuan-an-1.html</loc>
+<lastmod>2024-06-20T01:59:17+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>./category/w1.html</loc>
 <lastmod>2024-06-06T01:41:32+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -61,14 +82,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./category/w3.html</loc>
-<lastmod>2024-06-20T01:21:15+08:06</lastmod>
+<lastmod>2024-06-20T01:25:03+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/w1wang-zhi-bian-xie.html</loc>
-<lastmod>2024-06-20T01:21:15+08:06</lastmod>
+<loc>./category/w4.html</loc>
+<lastmod>2024-06-20T01:27:55+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./tag/w3wang-zhi-bian-xie.html</loc>
+<lastmod>2024-06-20T01:25:03+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./tag/w4wang-zhi-bian-xie.html</loc>
+<lastmod>2024-06-20T01:27:55+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./tag/qi-mo-zhuan-an-wang-zhi-bian-xie.html</loc>
+<lastmod>2024-06-20T01:59:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -82,7 +124,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./author/kmol.html</loc>
-<lastmod>2024-06-20T01:21:15+08:06</lastmod>
+<lastmod>2024-06-20T01:59:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
